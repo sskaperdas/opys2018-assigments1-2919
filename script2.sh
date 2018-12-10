@@ -41,6 +41,9 @@ for ((i=1;i<=$total_lines;i++)); do
     no_of_txt1=$(find $directory -type f -name '*.txt' | wc -l)
     if [ $no_of_txt1 -eq 2 ]; then
        echo repo${i} 1>> stdout.txt 2>&1
+       echo $total_no_of_txt 1>> stdout.txt 2>&1
+       echo $total_no_of_dir 1>> stdout.txt 2>&1
+       echo $other_files 1>> stdout.txt 2>&1
        echo "Directory structure is OK" 1>> stdout.txt 2>&1
     fi
    else
